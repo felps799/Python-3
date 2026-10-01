@@ -1,0 +1,128 @@
+➡️ Aula 04: Primeiros Passos e Comandos Básicos
+Focada em apresentar a sintaxe inicial, exibição de mensagens e a captura de dados digitados pelo usuário.
+
+print(): Exibe uma mensagem ou dado na tela do computador.  
+    Uso com Aspas: Mensagens de texto (strings) precisam de delimitadores como aspas simples '' ou duplas "". 
+    Exemplo: print('Olá, Mundo!').
+    Uso sem Aspas: Utilizado para fazer cálculos ou exibir números puros. 
+    Exemplo: print(7 + 4) exibe o resultado 11.
+
+= (Recebe): É o operador de atribuição. Ele guarda o valor da direita dentro da variável que está à esquerda. 
+    Exemplo: nome = 'Guanabara'.
+
+, (Vírgula no print): Serve para separar e exibir múltiplos tipos de dados diferentes juntos (como textos e números). 
+    Exemplo: print(nome, idade, peso).
+
+input(): Cria uma interatividade, pausando o programa para que o usuário digite algo. 
+    Exemplo: nome = input('Qual é o seu nome?').
+
+➡️ Aula 06: Tipos Primitivos e Saída de Dados
+Explica que por padrão tudo que vem do input() entra no programa como texto (String), necessitando das funções de conversão (casting) para cálculos.
+
+int(): Converte um valor para número Inteiro (números positivos, negativos ou zero, sem casas decimais).        
+    Exemplo: n1 = int(input('Digite um número')).
+
+float(): Converte um valor para número Real (ponto flutuante), ou seja, com casas decimais separadas por ponto. 
+    Exemplo: 4.5, 0.076.
+
+bool(): Representa um valor Booleano / Lógico. Só aceita True (Verdadeiro) ou False (Falso). Se a variável tiver conteúdo, retorna True; se estiver vazia, retorna False.
+
+str(): Representa uma String (cadeia de caracteres/texto). Tudo que estiver entre aspas.
+
+type(): Revela a classe/tipo primitivo de uma variável. 
+    Exemplo: type(n1) pode retornar <class 'int'> ou <class 'str'>.
+
+Métodos is... (Validação de Tipos):
+    .isnumeric(): Verifica se o texto digitado pode ser convertido em um número inteiro.
+    .isalpha(): Verifica se o conteúdo é composto apenas por letras do alfabeto.
+    .isalnum(): Verifica se é alfanumérico (contém letras e/ou números).
+    .isupper(): Verifica se o texto possui apenas letras maiúsculas.
+
+➡️ Aula 07: Operadores Aritméticos
+Apresenta os símbolos matemáticos e os recursos avançados de exibição do comando print().
+
+Operadores:
++ (Adição) 
+- (Subtração) 
+* (Multiplicação) 
+/ (Divisão padrão/real)
+** (Exponenciação / Potência): Eleva um número ao outro
+// (Divisão Inteira): Realiza a divisão e retorna apenas a parte inteira do quociente, sem as casas decimais.
+% (Módulo): Captura o resto inteiro de uma divisão.
+== (Igualdade): Utilizado para testar se um valor é igual ao outro (não confundir com um = sozinho).
+
+Formatações Extras no print():
+{:20}: Reserva um espaço fixo de 20 caracteres para exibir o dado.
+{:>20}: Alinha o texto à direita nos 20 espaços.
+{:<20}: Alinha o texto à esquerda nos 20 espaços.
+{:^20}: Centraliza o texto nos 20 espaços.
+{:=^20}: Centraliza preenchendo os espaços vazios com o símbolo =.
+{:.2f}: Limita a exibição de um número float para apenas 2 casas decimais.
+end=' ': Colocado no final do print(), impede que ele quebre a linha automaticamente, fazendo o próximo print() continuar na mesma linha.
+\n: Força uma quebra de linha no meio de uma string.
+
+➡️ Aula 08: Utilizando Módulos
+Explica como expandir as funcionalidades nativas do Python importando bibliotecas padrão e externas.
+import: Importa um módulo/biblioteca completa com todas as suas funções. 
+Ao usar, exige o prefixo nome_da_biblioteca.função(). 
+    Exemplo: import math 
+from ... import ...: Importa apenas uma ou mais funções específicas otimizando o uso de memória (6:25). 
+Permite chamar a função diretamente pelo nome. 
+    Exemplo: from math import sqrt, floor 
+
+Funções Matemáticas estudadas (math):
+    math.ceil(): Arredonda um número float sempre para cima.
+    math.floor(): Arredonda um número float sempre para baixo.
+    math.trunc(): Trunca o número, eliminando as casas decimais sem arredondar.
+    math.pow(): Calcula a potência
+    math.sqrt(): Calcula a raiz quadrada (square root).
+    math.factorial(): Calcula o fatorial de um número.
+
+Funções de Números Aleatórios (random):
+    random.random(): Gera um número float aleatório entre 0.0 e 1.0 
+    random.randint(inicio, fim): Gera um número inteiro aleatório dentro do intervalo definido  
+        Exemplo: random.randint(1, 10)
+
+➡️ Aula 09: Manipulando Texto
+Apresenta técnicas de fatiamento e funções para analisar e transformar Strings. 
+Nota: Uma string em seus microelementos originais é imutável no Python, a não ser que você salve o resultado de uma transformação por cima dela.
+Fatiamento [ ]:
+    frase[9]: Captura o caractere específico do índice 9 (lembrando que a contagem inicia em 0).
+    frase[9:13]: Captura do índice 9 até o 12. O último valor (13) é excluído.
+    frase[9:21:2]: Vai do 9 ao 20 pulando os caracteres de 2 em 2.
+    frase[:5]: Omitir o início significa começar do índice 0.
+    frase[15:]: Omitir o fim significa fatiar do índice 15 até o final do texto.
+    frase[9::3]: Começa no 9, vai até o final, pulando de 3 em 3.
+
+Análise :
+    len(frase): Retorna o comprimento total da string (quantidade de caracteres incluindo espaços).
+    frase.count('o'): Conta quantas vezes o caractere informado minúsculo aparece. 
+        Aceita fatiamento interno: frase.count('o', 0, 13).
+
+    frase.find('deo'): Procura pelo termo e retorna o número do índice onde ele começou (16:37). Caso o termo não exista, retorna -1.
+    'curso' in frase: Operador que faz uma checagem lógica. Retorna True se a palavra existir no texto ou False se não existir.
+
+Transformação:
+    frase.replace('Python', 'Android'): Procura a primeira palavra informada e a substitui pela segunda.
+    frase.upper(): Transforma todas as letras do texto em Maiúsculas.
+    frase.lower(): Transforma todas as letras em Minúsculas.
+    frase.capitalize(): Joga o texto todo para minúsculo e deixa apenas a primeira letra da frase em maiúscula.
+    frase.title(): Analisa os espaços e deixa a primeira letra de cada palavra em maiúscula.
+    frase.strip(): Remove todos os espaços em branco inúteis localizados no início e no fim do texto.
+        frase.rstrip(): Remove espaços inúteis apenas do lado direito (Right).
+        frase.lstrip(): Remove espaços inúteis apenas do lado esquerdo (Left).
+
+Divisão e Junção:
+    frase.split(): Divide a string nos seus espaços em branco. Gera uma lista contendo as palavras separadas, onde cada palavra ganha uma nova indexação própria.
+    '-'.join(frase): Junta elementos de uma lista de strings em uma única string, utilizando o caractere da esquerda como separador entre eles.
+
+➡️ Aula 10: Condições (Parte 1)
+Ensina a quebrar o fluxo linear de um programa usando desvios condicionais baseados em tomadas de decisões.
+if condição (Se): Abre o bloco verdadeiro. Se a condição for atendida, os comandos recuados (indentados com o Tab) logo abaixo dele serão executados.
+
+else (Senão): Abre o bloco falso. Caso a condição do if não seja verdadeira, o programa ignora o bloco do if e executa obrigatoriamente o código do else.
+
+Condição Simples: Possui apenas a estrutura do if.
+Condição Composta: Possui tanto o if quanto o desvio do else.
+Condição Simplificada (Operador Ternário do Python): Permite escrever uma condição simples/composta inteira em apenas uma única linha. 
+    Exemplo:print('Aprovado' if media >= 6 else 'Reprovado')

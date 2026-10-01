@@ -1,0 +1,5 @@
+p = float(input("Digite o preço do produto: R$ "))
+d = float(input("Digite o desconto em %: "))
+print(f"O produto custa R${p:.2f} e tem {d}% de desconto.")
+print(f"O valor do desconto é R${p * d / 100:.2f}.")
+print(f"O preço final do produto é R${p - (p * d / 100):.2f}.")

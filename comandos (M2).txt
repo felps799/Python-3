@@ -1,0 +1,55 @@
+➡️ Aula 12: Condições Aninhadas
+Esta aula ensina a criar desvios de fluxo para quando o programa possui três ou mais opções de caminhos para seguir. Aninhar significa colocar uma estrutura condicional dentro de outra.
+
+elif: É a contração de else if (senão se). 
+    É utilizado logo após um if para testar uma nova condição caso a anterior tenha sido falsa.
+    Regras: Você nunca pode começar um bloco diretamente com o elif (ele exige um if antes). 
+    Porém, você pode usar quantos elif quiser em sequência. O uso do else no final torna-se opcional.
+or / and: Operadores lógicos usados para combinar múltiplos testes dentro de uma mesma linha de if ou elif.
+in: Permite verificar se um elemento está contido dentro de um grupo de dados ou texto, simplificando testes que precisariam de vários or.
+
+➡️ Aula 13: Estrutura de Repetição for
+Apresenta o conceito de laços de repetição (iterações). 
+O for é a estrutura ideal para situações em que se sabe o limite exato de vezes que o bloco deve ser repetido.
+
+for c in range(): 
+    Cria um laço com uma variável de controle (c) que vai contar dentro de um intervalo. 
+    Tudo o que deve ser repetido precisa estar indentado (afastado da margem com a tecla Tab).
+
+range(início, fim): Determina o intervalo do contador. 
+    O Python sempre ignora o último número, parando um número antes. 
+    Para contar de 1 até 6, você deve programar range(1, 7).
+
+range(início, fim, passo): O terceiro parâmetro define como a contagem vai caminhar.
+
+Contagem Regressiva: Passar um número negativo faz o laço contar para trás (ex: range(6, 0, -1)).
+
+Salto: Passar um número positivo maior que 1 define o pulo (ex: range(0, 7, 2) conta de dois em dois).
+
+Acumuladores (s = s + n ou s += n): Técnica para somar valores progressivamente dentro de um laço. 
+    A variável acumuladora deve ser inicializada fora do laço (ex: s = 0).
+
+➡️ Aula 14: Estrutura de Repetição while
+O while (enquanto) é uma estrutura baseada em um teste lógico. 
+Ela é fundamental para situações em que você não sabe o limite / a quantidade de vezes que o programa precisará repetir.
+
+while condição: Mantém o bloco de código repetindo enquanto a condição testada for verdadeira. 
+    No momento em que ela se tornar falsa, o programa sai do laço.
+    Com limite conhecido: Pode simular o for, desde que você crie e gerencie manualmente um contador 
+    (ex: c = 1 inicial fora, e c += 1 dentro do bloco).
+    Com limite desconhecido: Continua lendo dados por tempo indeterminado até que uma condição específica aconteça.
+    Flag / Condição de Parada: É o valor digitado pelo usuário que serve como gatilho para encerrar o while. 
+        O número 0 ou a resposta 'N' (Não) foram usados como flags para finalizar as leituras.
+
+➡️ Aula 15: Interrompendo Repetições while
+Ensina a utilizar loops infinitos de forma estratégica e introduz uma forma direta de formatação de texto no Python.
+while True: Cria um loop infinito estrutural. 
+    Como a condição é literalmente True (Verdadeira), o cabeçalho nunca vai expirar sozinho.
+
+break: É o comando usado para interromper e quebrar o laço imediatamente. 
+    Quando o Python encontra o break, ele salta instantaneamente para fora do while.
+    
+    Utilidade: Evita erros de soma ou contagem com o número de parada. 
+    Você lê o dado dentro do loop e, se ele for a flag de encerramento (ex: 999), 
+    dá o break antes que o programa realize contas indesejadas com esse número.
+    
